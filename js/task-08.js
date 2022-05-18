@@ -14,6 +14,8 @@ function onFormSubmit(event) {
         return alert("Complete all fields!");
     }
     console.log("e-mail:", mail, "password:", password);
+
     event.currentTarget.reset();
 
 }
+
