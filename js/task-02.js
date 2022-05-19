@@ -8,16 +8,18 @@ const ingredients = [
 ];
 
 
-const ingredientsItem = document.querySelector("#ingredients");
+const ingredientsItems = document.querySelector("#ingredients");
 
-const itemsListEl = ingredients.map(ingredient => {
+const markup = (item) => {
   const itemEl = document.createElement("li");
-  itemEl.classList.add("item")
-  itemEl.textContent = `${ingredient}`;
-  ingredientsItem.append(itemEl);
-    
-}
-);
+  itemEl.textContent = item;
+  return itemEl;
+} 
+const createMarkup = ingredients.map(markup);
+ingredientsItems.append(...createMarkup);
 
-console.log(itemsListEl);
+console.log(ingredientsItems);
+
+
+
 
